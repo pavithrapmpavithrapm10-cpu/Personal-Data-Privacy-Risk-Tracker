@@ -1,0 +1,2758 @@
+GUI CODE
+from tkinter import *
+from tkinter import messagebox
+import webbrowser
+import subprocess
+from tkinter import *
+from tkinter import messagebox
+import webbrowser
+import subprocess
+def web():
+    messagebox.showinfo('WEBSITE','WEBSITE ABOUT TO OPEN')
+    webbrowser.open('https://gmu.ac.in/')
+def proj():
+    messagebox.showinfo('PROJECT', 'Launching Privacy Risk Checker')
+
+    try:
+        subprocess.Popen("python app.py", shell=True)
+        webbrowser.open("http://127.0.0.1:5000")
+    except:
+        messagebox.showerror("Error", "Could not start project")
+def report():
+    messagebox.showinfo('Report', 'Report about to open')
+    webbrowser.open('REPORT.pdf')
+def present():
+    messagebox.showinfo('presentation', 'PPT about to open')
+    webbrowser.open('Presentation.pdf')
+def journal():
+    messagebox.showinfo('journal', 'Journal about to open')
+    webbrowser.open('Journal.pdf')
+def Student1():
+    messagebox.showinfo('Student Resume', 'Resume about to open')
+    webbrowser.open('resume.pdf')
+def ProjectGuide():
+    messagebox.showinfo('Guide Profile', 'Guide profile about to open')
+    webbrowser.open('')
+
+
+
+gui=Tk()
+gui.geometry('1700x900')
+gui.title('GUI INTERFACE TESTING')
+gui.config(bg='#BD953E')
+gui.resizable(0,0)
+gui.state('zoomed')
+
+LOGOIM=PhotoImage(file='PICS/GMU_LOGO.png')
+LOGOB=Button(gui, image=LOGOIM,command=web).place(x=10,y=10)
+TITLE=Label(gui,text="GM UNIVERSITY DVG (R)",font=("Aerial Black",70,'bold'),bg='#BD953E',fg='#800000').place(x=200,y=10)
+SUBTITLE=Label(gui,text="Address: No. 8 to 42, Karur Industrial Area, PB Rd, Davanagere, Karnataka 577006",font=("Aerial Black",15,'bold'),bg='#BD953E',fg='BLACK').place(x=300,y=120)
+
+# ----------- BUTTON STYLE -----------
+btn_style = {
+    "bd":0,
+    "cursor":"hand2",
+    "bg":"white",
+    "activebackground":"white"
+}
+
+# -------- FIRST ROW --------
+row1 = Frame(gui,bg='#BD953E')
+row1.place(relx=0.5,y=260,anchor="n")
+
+PROIM=PhotoImage(file='PICS/PROJECT_LOGO.png')
+Button(row1,image=PROIM,command=proj,**btn_style).grid(row=0,column=0,padx=120)
+
+REPORTIM=PhotoImage(file='PICS/REPORT.png')
+Button(row1,image=REPORTIM,command=report,**btn_style).grid(row=0,column=1,padx=120)
+
+PPTIM=PhotoImage(file='PICS/PPT.png')
+Button(row1,image=PPTIM,command=present,**btn_style).grid(row=0,column=2,padx=120)
+
+Label(row1,text="PROJECT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=0,pady=10)
+
+Label(row1,text="REPORT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=1,pady=10)
+
+Label(row1,text="PRESENTATION",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=2,pady=10)
+
+
+# -------- SECOND ROW --------
+row2 = Frame(gui,bg='#BD953E')
+row2.place(relx=0.5,y=520,anchor="n")
+
+journalIM=PhotoImage(file='PICS/Journal_logo.png')
+Button(row2,image=journalIM,command=journal,**btn_style).grid(row=0,column=0,padx=120)
+
+Student1IM=PhotoImage(file='PICS/team.png')
+Button(row2,image=Student1IM,command=Student1,**btn_style).grid(row=0,column=1,padx=120)
+
+GuideIM=PhotoImage(file='PICS/guide.png')
+Button(row2,image=GuideIM,command=ProjectGuide,**btn_style).grid(row=0,column=2,padx=120)
+
+Label(row2,text="JOURNAL",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=0,pady=10)
+
+Label(row2,text="STUDENT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=1,pady=10)
+
+Label(row2,text="GUIDE",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=2,pady=10)
+gui.mainloop()
+
+AAPP.PY
+from tkinter import *
+from tkinter import messagebox
+import webbrowser
+import subprocess
+from tkinter import *
+from tkinter import messagebox
+import webbrowser
+import subprocess
+def web():
+    messagebox.showinfo('WEBSITE','WEBSITE ABOUT TO OPEN')
+    webbrowser.open('https://gmu.ac.in/')
+def proj():
+    messagebox.showinfo('PROJECT', 'Launching Privacy Risk Checker')
+
+    try:
+        subprocess.Popen("python app.py", shell=True)
+        webbrowser.open("http://127.0.0.1:5000")
+    except:
+        messagebox.showerror("Error", "Could not start project")
+def report():
+    messagebox.showinfo('Report', 'Report about to open')
+    webbrowser.open('REPORT.pdf')
+def present():
+    messagebox.showinfo('presentation', 'PPT about to open')
+    webbrowser.open('Presentation.pdf')
+def journal():
+    messagebox.showinfo('journal', 'Journal about to open')
+    webbrowser.open('Journal.pdf')
+def Student1():
+    messagebox.showinfo('Student Resume', 'Resume about to open')
+    webbrowser.open('resume.pdf')
+def ProjectGuide():
+    messagebox.showinfo('Guide Profile', 'Guide profile about to open')
+    webbrowser.open('')
+
+
+
+gui=Tk()
+gui.geometry('1700x900')
+gui.title('GUI INTERFACE TESTING')
+gui.config(bg='#BD953E')
+gui.resizable(0,0)
+gui.state('zoomed')
+
+LOGOIM=PhotoImage(file='PICS/GMU_LOGO.png')
+LOGOB=Button(gui, image=LOGOIM,command=web).place(x=10,y=10)
+TITLE=Label(gui,text="GM UNIVERSITY DVG (R)",font=("Aerial Black",70,'bold'),bg='#BD953E',fg='#800000').place(x=200,y=10)
+SUBTITLE=Label(gui,text="Address: No. 8 to 42, Karur Industrial Area, PB Rd, Davanagere, Karnataka 577006",font=("Aerial Black",15,'bold'),bg='#BD953E',fg='BLACK').place(x=300,y=120)
+
+# ----------- BUTTON STYLE -----------
+btn_style = {
+    "bd":0,
+    "cursor":"hand2",
+    "bg":"white",
+    "activebackground":"white"
+}
+
+# -------- FIRST ROW --------
+row1 = Frame(gui,bg='#BD953E')
+row1.place(relx=0.5,y=260,anchor="n")
+
+PROIM=PhotoImage(file='PICS/PROJECT_LOGO.png')
+Button(row1,image=PROIM,command=proj,**btn_style).grid(row=0,column=0,padx=120)
+
+REPORTIM=PhotoImage(file='PICS/REPORT.png')
+Button(row1,image=REPORTIM,command=report,**btn_style).grid(row=0,column=1,padx=120)
+
+PPTIM=PhotoImage(file='PICS/PPT.png')
+Button(row1,image=PPTIM,command=present,**btn_style).grid(row=0,column=2,padx=120)
+
+Label(row1,text="PROJECT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=0,pady=10)
+
+Label(row1,text="REPORT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=1,pady=10)
+
+Label(row1,text="PRESENTATION",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=2,pady=10)
+
+
+# -------- SECOND ROW --------
+row2 = Frame(gui,bg='#BD953E')
+row2.place(relx=0.5,y=520,anchor="n")
+
+journalIM=PhotoImage(file='PICS/Journal_logo.png')
+Button(row2,image=journalIM,command=journal,**btn_style).grid(row=0,column=0,padx=120)
+
+Student1IM=PhotoImage(file='PICS/team.png')
+Button(row2,image=Student1IM,command=Student1,**btn_style).grid(row=0,column=1,padx=120)
+
+GuideIM=PhotoImage(file='PICS/guide.png')
+Button(row2,image=GuideIM,command=ProjectGuide,**btn_style).grid(row=0,column=2,padx=120)
+
+Label(row2,text="JOURNAL",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=0,pady=10)
+
+Label(row2,text="STUDENT",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=1,pady=10)
+
+Label(row2,text="GUIDE",font=("Arial Black",15,'bold'),
+bg='#800000',fg='white').grid(row=1,column=2,pady=10)
+gui.mainloop()
+
+404.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-container {
+            text-align: center;
+            color: white;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .btn-home {
+            background: white;
+            color: #764ba2;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h2>Page Not Found</h2>
+        <p class="mb-4">The page you're looking for doesn't exist.</p>
+        <a href="{{ url_for('home') }}" class="btn-home">
+            <i class="fas fa-home"></i> Go Home
+        </a>
+    </div>
+</body>
+</html>
+
+500.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Server Error</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-container {
+            text-align: center;
+            color: white;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .btn-home {
+            background: white;
+            color: #764ba2;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">500</div>
+        <h2>Internal Server Error</h2>
+        <p class="mb-4">Something went wrong. Please try again later.</p>
+        <a href="{{ url_for('home') }}" class="btn-home">
+            <i class="fas fa-home"></i> Go Home
+        </a>
+    </div>
+</body>
+</html>
+
+base.py
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Privacy Risk Checker{% endblock %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #800000;
+            --secondary: #BD953E;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #17a2b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            color: var(--primary) !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand i {
+            color: var(--secondary);
+        }
+
+        .nav-link {
+            color: var(--primary) !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary) !important;
+        }
+
+        .nav-link.active {
+            color: var(--secondary) !important;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: #660000;
+            border-color: #660000;
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 0;
+        }
+
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 30px 0;
+            margin-top: auto;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .breadcrumb {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px 20px;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <i class="fas fa-shield-alt"></i>
+                Privacy Risk Checker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                {% if is_logged_in() %}
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}"
+                           href="{{ url_for('home') }}">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'check_email' %}active{% endif %}"
+                           href="{{ url_for('check_email') }}">
+                            <i class="fas fa-envelope"></i> Check Email
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'subscribe' %}active{% endif %}"
+                           href="{{ url_for('subscribe') }}">
+                            <i class="fas fa-bell"></i> Alerts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}"
+                           href="{{ url_for('dashboard') }}">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                           data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> {{ current_user().name }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{{ url_for('profile') }}">
+                                <i class="fas fa-user"></i> Profile
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="{{ url_for('logout') }}">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {% else %}
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.endpoint == 'login' %}active{% endif %}"
+                           href="{{ url_for('login') }}">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2"
+                           href="{{ url_for('register') }}">
+                            <i class="fas fa-user-plus"></i> Register
+                        </a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash Messages -->
+    <div class="container mt-3">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show">
+                        <i class="fas fa-{{ 'exclamation-circle' if category == 'error' else 'check-circle' if category == 'success' else 'info-circle' }}"></i>
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-shield-alt"></i> Privacy Risk Checker</h5>
+                    <p>A project by GM University students to help protect your digital identity.</p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> GM University, Davanagere<br>
+                        <i class="fas fa-envelope"></i> privacy@gmu.ac.in
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('check_email') }}">Check Email</a></li>
+                        <li><a href="{{ url_for('subscribe') }}">Get Alerts</a></li>
+                        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('privacy') }}">Privacy</a></li>
+                        <li><a href="{{ url_for('terms') }}">Terms</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <div class="text-center">
+                <p>&copy; 2024 GM University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Common JS -->
+    <script>
+        // Auto-hide alerts after 5 seconds
+        setTimeout(function() {
+            document.querySelectorAll('.alert').forEach(function(alert) {
+                alert.style.transition = 'opacity 1s';
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                    alert.remove();
+                }, 1000);
+            });
+        }, 5000);
+
+        // Format numbers
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+    </script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+
+check_email.html
+{% extends "base.html" %}
+
+{% block title %}Check Email - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center py-3">
+                    <i class="fas fa-envelope fa-3x mb-2"></i>
+                    <h3 class="mb-0">Email Breach Check</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form method="POST" action="{{ url_for('check_email') }}">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Enter Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </span>
+                                <input type="email" class="form-control form-control-lg"
+                                       name="email" placeholder="your@email.com" required>
+                            </div>
+                            <small class="text-muted">
+                                We'll check this email against our breach database
+                            </small>
+                        </div>
+
+                        <div class="alert alert-info mb-4">
+                            <i class="fas fa-lock"></i>
+                            <strong>Privacy Protected:</strong> Your email is hashed before checking.
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-search"></i> Check Email
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Quick Info -->
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h5><i class="fas fa-info-circle text-primary"></i> How it works</h5>
+                    <ol class="mb-0">
+                        <li>You enter your email address</li>
+                        <li>We hash it for privacy</li>
+                        <li>Check against breach database</li>
+                        <li>Show you the results</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+contact.html
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center text-white mb-4">Contact Us</h1>
+
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST" action="#" onsubmit="return sendMessage()">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <hr>
+
+                    <div class="text-center">
+                        <h5>Other Ways to Reach Us</h5>
+                        <p><i class="fas fa-envelope text-primary"></i> privacy@gmu.ac.in</p>
+                        <p><i class="fas fa-map-marker-alt text-primary"></i> GM University, Davanagere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendMessage() {
+        alert('Thank you for your message! We will get back to you soon.');
+        return false;
+    }
+</script>
+{% endblock %}
+
+dashboard.html
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <!-- Welcome Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h2 class="mb-1">Welcome back, {{ user.name }}!</h2>
+                            <p class="mb-0">Member since {{ user.created_at.strftime('%B %d, %Y') }}</p>
+                        </div>
+                        <div>
+                            <span class="badge bg-light text-dark p-3">
+                                <i class="fas fa-shield-alt"></i>
+                                {% if user.is_verified %}
+                                    <span class="text-success">✓ Verified Account</span>
+                                {% else %}
+                                    <span class="text-warning">⚠ Unverified Account</span>
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="row mb-4">
+        <div class="col-md-3">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                    <h3 class="{% if stats.total_breaches > 0 %}text-danger{% endif %}">
+                        {{ stats.total_breaches }}
+                    </h3>
+                    <p class="text-muted mb-0">Breaches Found</p>
+                    {% if stats.total_breaches > 0 %}
+                        <small class="text-danger">⚠ Action needed</small>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-exclamation-triangle fa-3x text-danger mb-3"></i>
+                    <h3>{{ stats.high_risk }}</h3>
+                    <p class="text-muted mb-0">High Risk</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-bell fa-3x text-warning mb-3"></i>
+                    <h3>{{ stats.active_alerts }}</h3>
+                    <p class="text-muted mb-0">Active Alerts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center h-100">
+                <div class="card-body">
+                    <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                    <h3>{{ stats.resolved }}</h3>
+                    <p class="text-muted mb-0">Resolved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Left Column - Monitored Emails -->
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-envelope"></i> Monitored Emails</h5>
+                    <button class="btn btn-sm btn-primary" onclick="addEmail()">
+                        <i class="fas fa-plus"></i> Add Email
+                    </button>
+                </div>
+                <div class="card-body">
+                    {% if monitored_emails %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                        <th>Breaches</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for email in monitored_emails %}
+                                    <tr>
+                                        <td>
+                                            <strong>{{ email.address }}</strong>
+                                            {% if email.primary %}
+                                                <span class="badge bg-primary ms-2">Primary</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if email.status == 'safe' %}
+                                                <span class="badge bg-success">Safe</span>
+                                            {% elif email.status == 'warning' %}
+                                                <span class="badge bg-warning text-dark">At Risk</span>
+                                            {% elif email.status == 'danger' %}
+                                                <span class="badge bg-danger">Compromised</span>
+                                            {% else %}
+                                                <span class="badge bg-secondary">{{ email.status }}</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            {% if email.breach_count > 0 %}
+                                                <span class="badge bg-danger">
+                                                    {{ email.breach_count }} breach{{ 'es' if email.breach_count != 1 else '' }}
+                                                </span>
+                                            {% else %}
+                                                <span class="badge bg-success">No breaches</span>
+                                            {% endif %}
+                                        </td>
+                                        <td>
+                                            <a href="{{ url_for('results', email=email.address) }}"
+                                               class="btn btn-sm btn-outline-primary">
+                                                <i class="fas fa-search"></i> Check
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="fas fa-envelope-open fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">No emails being monitored yet.</p>
+                            <button class="btn btn-primary" onclick="addEmail()">
+                                <i class="fas fa-plus"></i> Add Your First Email
+                            </button>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Recent Alerts -->
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-bell"></i> Recent Alerts</h5>
+                </div>
+                <div class="card-body">
+                    {% if recent_alerts %}
+                        {% for alert in recent_alerts %}
+                        <div class="alert alert-{{ 'danger' if alert.severity == 'high' else 'warning' }} d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-exclamation-triangle fa-2x"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">{{ alert.title }}</h6>
+                                <p class="mb-1">{{ alert.message }}</p>
+                                <small class="text-muted">
+                                    <i class="fas fa-clock"></i> {{ alert.created_at.strftime('%Y-%m-%d %H:%M') }}
+                                </small>
+                                <div class="mt-2">
+                                    <a href="{{ url_for('results', email=alert.affected_emails[0]) }}"
+                                       class="btn btn-sm btn-outline-primary">
+                                        View Details
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="text-center py-4">
+                            <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                            <p class="text-muted">No new alerts. You're all caught up!</p>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column - Quick Actions & Subscription Status -->
+        <div class="col-md-4">
+            <!-- Subscription Status -->
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-bell"></i> Alert Status</h5>
+                </div>
+                <div class="card-body">
+                    {% if is_subscribed %}
+                        <div class="text-center text-success mb-3">
+                            <i class="fas fa-check-circle fa-3x"></i>
+                            <h6 class="mt-2">✓ You're subscribed to alerts</h6>
+                        </div>
+                        <p class="text-muted small">You'll receive email notifications when your email appears in new breaches.</p>
+                    {% else %}
+                        <div class="text-center text-warning mb-3">
+                            <i class="fas fa-exclamation-triangle fa-3x"></i>
+                            <h6 class="mt-2">⚠ Not subscribed to alerts</h6>
+                        </div>
+                        <p class="text-muted small">Get notified immediately when your email appears in new breaches.</p>
+                        <a href="{{ url_for('subscribe') }}" class="btn btn-warning w-100">
+                            <i class="fas fa-bell"></i> Subscribe Now
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="card mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-bolt"></i> Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('check_email') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-envelope"></i> Check New Email
+                        </a>
+                        <a href="{{ url_for('subscribe') }}" class="btn btn-outline-warning">
+                            <i class="fas fa-bell"></i> Manage Alerts
+                        </a>
+                        <a href="{{ url_for('profile') }}" class="btn btn-outline-info">
+                            <i class="fas fa-user"></i> View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Checks -->
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-history"></i> Recent Checks</h5>
+                </div>
+                <div class="card-body">
+                    {% if user.breach_history %}
+                        <ul class="list-unstyled">
+                            {% for check in user.breach_history[-5:]|reverse %}
+                                <li class="mb-2 pb-2 border-bottom">
+                                    <small>
+                                        <i class="fas fa-envelope text-primary me-1"></i>
+                                        <strong>{{ check.email }}</strong>
+                                    </small>
+                                    <br>
+                                    <small class="text-muted">
+                                        {{ check.checked_at.strftime('%Y-%m-%d %H:%M') }}
+                                        {% if check.breaches %}
+                                            <span class="badge bg-danger ms-1">
+                                                {{ check.breaches|length }} breach{{ 'es' if check.breaches|length != 1 else '' }}
+                                            </span>
+                                        {% else %}
+                                            <span class="badge bg-success ms-1">Safe</span>
+                                        {% endif %}
+                                    </small>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p class="text-muted text-center">No recent checks</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Email Modal -->
+<div class="modal fade" id="addEmailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Email to Monitor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="Enter email to monitor">
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="primaryEmail">
+                    <label class="form-check-label" for="primaryEmail">
+                        Set as primary email
+                    </label>
+                </div>
+                <div class="alert alert-info">
+                    <i class="fas fa-info-circle"></i>
+                    We'll monitor this email for future breaches and alert you immediately.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="saveEmail()">Add Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addEmail() {
+        new bootstrap.Modal(document.getElementById('addEmailModal')).show();
+    }
+
+    function saveEmail() {
+        const email = document.getElementById('newEmail').value;
+        const isPrimary = document.getElementById('primaryEmail').checked;
+
+        if (!email) {
+            alert('Please enter an email address');
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+
+        // In a real app, you'd send this to the server
+        alert(`Email ${email} added to monitoring list!`);
+        location.reload();
+    }
+
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+</script>
+{% endblock %}
+
+faq.html
+{% extends "base.html" %}
+
+{% block title %}FAQ - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center text-white mb-4">Frequently Asked Questions</h1>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What is Privacy Risk Checker?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Privacy Risk Checker is a tool that helps you check if your email has been compromised in any known data breaches. We use the Have I Been Pwned API to provide accurate and up-to-date breach information.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Is my email stored or shared?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    No! We never store your actual email address. All searches are performed using secure, privacy-preserving methods. Your email is hashed before checking, and we never share your information with third parties.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    How accurate is the breach data?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We use the official Have I Been Pwned API, which is the industry standard for breach data. The database contains over 11 billion accounts from more than 600 data breaches.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What should I do if my email is found in a breach?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    If your email appears in a breach:
+                                    <ul>
+                                        <li>Change your password immediately</li>
+                                        <li>Enable two-factor authentication</li>
+                                        <li>Check if you use the same password elsewhere</li>
+                                        <li>Subscribe to alerts for future breaches</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    How do I subscribe to breach alerts?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Simply go to the Alerts page, enter your email, and click Subscribe. You'll receive a verification email to confirm your subscription. Once verified, we'll notify you immediately if your email appears in new breaches.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Is this service free?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Privacy Risk Checker is completely free to use. This is a project by GM University students to help people protect their digital identity.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+home.html
+{% extends "base.html" %}
+
+{% block title %}Home - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Hero Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center text-white">
+            <h1 class="display-3 mb-4">Privacy Risk Checker</h1>
+            <p class="lead mb-5">Check if your email has been exposed in data breaches</p>
+
+            <form method="POST" action="{{ url_for('home') }}" class="bg-white p-2 rounded-pill">
+                <div class="input-group">
+                    <input type="email" class="form-control border-0 bg-transparent" name="email"
+                           placeholder="Enter your email address" required>
+                    <button class="btn btn-primary rounded-pill px-5" type="submit">
+                        <i class="fas fa-search"></i> Check Now
+                    </button>
+                </div>
+            </form>
+
+            <p class="mt-3">
+                <small>
+                    <i class="fas fa-lock"></i> Your privacy is protected. We use secure, privacy-preserving searches.
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="row mb-5">
+        <div class="col-md-4 mb-3">
+            <div class="bg-white p-4 rounded-4 text-center">
+                <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                <h3>1,500+</h3>
+                <p class="text-muted">Data Breaches</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="bg-white p-4 rounded-4 text-center">
+                <i class="fas fa-users fa-3x text-warning mb-3"></i>
+                <h3>12B+</h3>
+                <p class="text-muted">Compromised Accounts</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="bg-white p-4 rounded-4 text-center">
+                <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+                <h3>24/7</h3>
+                <p class="text-muted">Real-time Monitoring</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="bg-white p-4 rounded-4 h-100">
+                <div class="text-center mb-3">
+                    <i class="fas fa-envelope fa-3x text-primary"></i>
+                </div>
+                <h4 class="text-center">Email Breach Check</h4>
+                <p class="text-muted text-center">Check if your email appears in any known data breaches</p>
+                <div class="text-center">
+                    <a href="{{ url_for('check_email') }}" class="btn btn-outline-primary">Check Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4">
+            <div class="bg-white p-4 rounded-4 h-100">
+                <div class="text-center mb-3">
+                    <i class="fas fa-bell fa-3x text-warning"></i>
+                </div>
+                <h4 class="text-center">Breach Alerts</h4>
+                <p class="text-muted text-center">Get notified when your email appears in new breaches</p>
+                <div class="text-center">
+                    <a href="{{ url_for('subscribe') }}" class="btn btn-outline-warning">Get Alerts</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Breaches Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-white mb-4">Recent Data Breaches</h3>
+            <div class="bg-white p-4 rounded-4">
+                <div class="list-group">
+                    <div class="list-group-item border-0">
+                        <h5>Adobe</h5>
+                        <p class="text-muted mb-0">153 million accounts affected • October 2013</p>
+                    </div>
+                    <div class="list-group-item border-0">
+                        <h5>LinkedIn</h5>
+                        <p class="text-muted mb-0">164 million accounts affected • May 2016</p>
+                    </div>
+                    <div class="list-group-item border-0">
+                        <h5>MySpace</h5>
+                        <p class="text-muted mb-0">360 million accounts affected • July 2008</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+login.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Privacy Risk Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .login-header {
+            background: #800000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .login-header i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .login-header h2 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .login-body {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .input-group-text {
+            background: #f8f9fa;
+            border: none;
+            color: #800000;
+        }
+
+        .form-control {
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn-login {
+            background: #800000;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #660000;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password {
+            color: #800000;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .register-link a {
+            color: #800000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Welcome Back</h2>
+            <p>Login to your account</p>
+        </div>
+
+        <div class="login-body">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'danger' if category == 'error' else 'success' if category == 'success' else 'info' }} alert-dismissible fade show">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" name="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+
+                <div class="remember-me">
+                    <div>
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn-login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+            </form>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Register here</a></p>
+            </div>
+
+            <div class="mt-3 text-center">
+                <small class="text-muted">
+                    <i class="fas fa-lock"></i> Your data is secure with us
+                </small>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+privacy.html
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center text-white mb-4">Privacy Policy</h1>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Our Commitment to Privacy</h4>
+                    <p>At Privacy Risk Checker, we take your privacy seriously. This policy describes how we handle your information.</p>
+
+                    <h5 class="mt-4">Information We Collect</h5>
+                    <ul>
+                        <li><strong>Email Address:</strong> When you check an email, we only store a secure hash of it, never the actual email.</li>
+                        <li><strong>Account Information:</strong> If you register, we store your name and email (securely hashed password).</li>
+                        <li><strong>Usage Data:</strong> We collect anonymous usage statistics to improve our service.</li>
+                    </ul>
+
+                    <h5 class="mt-4">How We Use Your Information</h5>
+                    <ul>
+                        <li>To check if your email appears in data breaches</li>
+                        <li>To send you breach alerts (if subscribed)</li>
+                        <li>To improve our service</li>
+                    </ul>
+
+                    <h5 class="mt-4">Data Security</h5>
+                    <p>We use industry-standard security measures to protect your information:</p>
+                    <ul>
+                        <li>Passwords are hashed using SHA-256</li>
+                        <li>Emails are hashed before storage</li>
+                        <li>All connections are encrypted</li>
+                    </ul>
+
+                    <h5 class="mt-4">Third-Party Services</h5>
+                    <p>We use the Have I Been Pwned API to check for breaches. When you check an email, we send a hash of your email to their service. Your actual email is never shared.</p>
+
+                    <h5 class="mt-4">Your Rights</h5>
+                    <ul>
+                        <li>You can request deletion of your account</li>
+                        <li>You can unsubscribe from alerts at any time</li>
+                        <li>You can contact us with privacy concerns</li>
+                    </ul>
+
+                    <p class="mt-4">Last updated: March 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+profile.html
+{% extends "base.html" %}
+
+{% block title %}My Profile - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Profile Card -->
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="profile-avatar mb-3">
+                        <i class="fas fa-user-circle fa-5x text-primary"></i>
+                    </div>
+                    <h4>{{ user.name }}</h4>
+                    <p class="text-muted">{{ user.email }}</p>
+
+                    <div class="mt-3">
+                        {% if user.is_verified %}
+                            <span class="badge bg-success p-2">
+                                <i class="fas fa-check-circle"></i> Verified Account
+                            </span>
+                        {% else %}
+                            <span class="badge bg-warning p-2">
+                                <i class="fas fa-exclamation-triangle"></i> Unverified
+                            </span>
+                        {% endif %}
+                    </div>
+
+                    <hr>
+
+                    <div class="text-start">
+                        <p><i class="fas fa-calendar-alt text-primary me-2"></i> Member since: {{ user.created_at.strftime('%B %d, %Y') }}</p>
+                        <p><i class="fas fa-shield-alt text-primary me-2"></i> Account Status: Active</p>
+                    </div>
+
+                    <button class="btn btn-primary w-100 mt-3" onclick="editProfile()">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </button>
+                </div>
+            </div>
+
+            <!-- Account Stats -->
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-chart-bar"></i> Account Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Total Checks:</span>
+                        <strong>15</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Breaches Found:</span>
+                        <strong>3</strong>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Active Alerts:</span>
+                        <strong>2</strong>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Monitored Emails:</span>
+                        <strong>1</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Account Settings -->
+            <div class="card">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-cog"></i> Account Settings</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <!-- Personal Information -->
+                        <h6 class="mb-3">Personal Information</h6>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" value="{{ user.name }}" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" value="{{ user.email }}" readonly>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Security Settings -->
+                        <h6 class="mb-3">Security Settings</h6>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" value="********" readonly>
+                            <small class="text-muted">Last changed: 30 days ago</small>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="changePassword()">
+                            <i class="fas fa-key"></i> Change Password
+                        </button>
+
+                        <hr>
+
+                        <!-- Notification Preferences -->
+                        <h6 class="mb-3">Notification Preferences</h6>
+
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="emailAlerts" checked>
+                            <label class="form-check-label" for="emailAlerts">
+                                Email Alerts (instant notifications)
+                            </label>
+                        </div>
+
+                        <div class="form-check form-switch mb-2">
+                            <input class="form-check-input" type="checkbox" id="weeklyDigest" checked>
+                            <label class="form-check-label" for="weeklyDigest">
+                                Weekly Digest (summary of new breaches)
+                            </label>
+                        </div>
+
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="marketingEmails">
+                            <label class="form-check-label" for="marketingEmails">
+                                Marketing Emails (product updates and news)
+                            </label>
+                        </div>
+
+                        <hr>
+
+                        <!-- Danger Zone -->
+                        <h6 class="mb-3 text-danger">Danger Zone</h6>
+
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <strong>Warning:</strong> Deleting your account is permanent and cannot be undone.
+                        </div>
+
+                        <button type="button" class="btn btn-outline-danger" onclick="deleteAccount()">
+                            <i class="fas fa-trash"></i> Delete Account
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card mt-4">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0"><i class="fas fa-history"></i> Recent Activity</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-search text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="mb-1"><strong>Email Check</strong> - gaganata2003@gmail.com</p>
+                                <small class="text-muted">2 minutes ago</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-bell text-warning"></i>
+                            </div>
+                            <div>
+                                <p class="mb-1"><strong>Alert Subscribed</strong> - Breach alerts enabled</p>
+                                <small class="text-muted">5 minutes ago</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-exclamation-triangle text-danger"></i>
+                            </div>
+                            <div>
+                                <p class="mb-1"><strong>Breach Found</strong> - Your email was found in 3 breaches</p>
+                                <small class="text-muted">1 hour ago</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="changePasswordModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Change Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="changePasswordForm">
+                    <div class="mb-3">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="updatePassword()">Update Password</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editProfile() {
+        alert('Profile editing feature coming soon!');
+    }
+
+    function changePassword() {
+        new bootstrap.Modal(document.getElementById('changePasswordModal')).show();
+    }
+
+    function updatePassword() {
+        alert('Password updated successfully!');
+        bootstrap.Modal.getInstance(document.getElementById('changePasswordModal')).hide();
+    }
+
+    function deleteAccount() {
+        if (confirm('Are you sure you want to delete your account? This action cannot be undone.')) {
+            alert('Account deletion request submitted.');
+        }
+    }
+</script>
+{% endblock %}
+
+register.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Privacy Risk Checker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .register-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            margin: 20px;
+        }
+
+        .register-header {
+            background: #800000;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .register-header i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .register-header h2 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .register-body {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .input-group-text {
+            background: #f8f9fa;
+            border: none;
+            color: #800000;
+        }
+
+        .form-control {
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .btn-register {
+            background: #800000;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-register:hover {
+            background: #660000;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .login-link a {
+            color: #800000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .password-strength {
+            margin-top: 5px;
+            font-size: 0.85rem;
+        }
+
+        .strength-meter {
+            height: 5px;
+            background: #eee;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .strength-meter div {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <i class="fas fa-user-plus"></i>
+            <h2>Create Account</h2>
+            <p>Join Privacy Risk Checker today</p>
+        </div>
+
+        <div class="register-body">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ 'danger' if category == 'error' else 'success' if category == 'success' else 'info' }} alert-dismissible fade show">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="{{ url_for('register') }}" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <input type="text" class="form-control" name="name" placeholder="Enter your full name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Create a password" required onkeyup="checkPasswordStrength()">
+                    </div>
+                    <div class="password-strength">
+                        <small>Password strength:</small>
+                        <div class="strength-meter">
+                            <div id="strengthBar" style="width: 0%; background: #dc3545;"></div>
+                        </div>
+                        <small id="strengthText" class="text-muted">Enter password</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required onkeyup="checkPasswordMatch()">
+                    </div>
+                    <small id="passwordMatch" class="text-muted"></small>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                        I agree to the <a href="{{ url_for('terms') }}" target="_blank">Terms of Service</a> and <a href="{{ url_for('privacy') }}" target="_blank">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-register" id="submitBtn">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </form>
+
+            <div class="login-link">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function checkPasswordStrength() {
+            const password = document.getElementById('password').value;
+            const strengthBar = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+
+            let strength = 0;
+
+            if (password.length >= 6) strength += 25;
+            if (password.length >= 8) strength += 25;
+            if (/[A-Z]/.test(password)) strength += 25;
+            if (/[0-9]/.test(password)) strength += 25;
+            if (/[^A-Za-z0-9]/.test(password)) strength += 25;
+
+            strength = Math.min(strength, 100);
+
+            strengthBar.style.width = strength + '%';
+
+            if (strength < 25) {
+                strengthBar.style.background = '#dc3545';
+                strengthText.textContent = 'Weak';
+                strengthText.style.color = '#dc3545';
+            } else if (strength < 50) {
+                strengthBar.style.background = '#ffc107';
+                strengthText.textContent = 'Fair';
+                strengthText.style.color = '#ffc107';
+            } else if (strength < 75) {
+                strengthBar.style.background = '#17a2b8';
+                strengthText.textContent = 'Good';
+                strengthText.style.color = '#17a2b8';
+            } else {
+                strengthBar.style.background = '#28a745';
+                strengthText.textContent = 'Strong';
+                strengthText.style.color = '#28a745';
+            }
+        }
+
+        function checkPasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm_password').value;
+            const matchText = document.getElementById('passwordMatch');
+
+            if (confirm.length === 0) {
+                matchText.textContent = '';
+            } else if (password === confirm) {
+                matchText.textContent = '✓ Passwords match';
+                matchText.style.color = '#28a745';
+            } else {
+                matchText.textContent = '✗ Passwords do not match';
+                matchText.style.color = '#dc3545';
+            }
+        }
+
+        function validateForm() {
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm_password').value;
+            const terms = document.getElementById('terms').checked;
+
+            if (password !== confirm) {
+                alert('Passwords do not match!');
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long!');
+                return false;
+            }
+
+            if (!terms) {
+                alert('You must agree to the Terms of Service and Privacy Policy!');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
+
+reports.html
+{% extends "base.html" %}
+
+{% block title %}Breach Check Results - {{ email }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url_for('check_email_page') }}">Check Email</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Results</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Results Header -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 text-center">
+            <h1 class="display-4 mb-3">Breach Check Results</h1>
+            <p class="lead">for <strong class="text-primary">{{ email }}</strong></p>
+        </div>
+    </div>
+
+    <!-- Summary Card -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8">
+            {% if total_breaches > 0 %}
+            <div class="card border-danger shadow-lg">
+                <div class="card-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-exclamation-triangle fa-5x text-danger"></i>
+                    </div>
+                    <h2 class="text-danger mb-3">Oh no — Your email has been pwned!</h2>
+                    <p class="lead mb-4">
+                        This email was found in <strong class="text-danger">{{ total_breaches }}</strong>
+                        data breach{% if total_breaches > 1 %}es{% endif %}.
+                    </p>
+
+                    <!-- Risk Level Badge -->
+                    <div class="mb-4">
+                        <span class="badge bg-{% if risk_level == 'high' %}danger{% elif risk_level == 'medium' %}warning{% else %}info{% endif %} p-3" style="font-size: 1.2rem;">
+                            <i class="fas fa-shield-alt"></i> Risk Level: {{ risk_level|upper }}
+                        </span>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="stat-box p-3 bg-light rounded">
+                                <h3 class="text-danger">{{ total_breaches }}</h3>
+                                <small>Total Breaches</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box p-3 bg-light rounded">
+                                <h3 class="text-danger">{{ data_classes|length }}</h3>
+                                <small>Data Types Exposed</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-box p-3 bg-light rounded">
+                                <h3 class="text-danger">{{ breaches|sum(attribute='PwnCount')|default('Unknown') }}</h3>
+                                <small>Total Affected Accounts</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="card border-success shadow-lg">
+                <div class="card-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle fa-5x text-success"></i>
+                    </div>
+                    <h2 class="text-success mb-3">Good news — No breaches found!</h2>
+                    <p class="lead mb-4">
+                        Your email was not found in any known data breaches.
+                    </p>
+                    <div class="alert alert-info">
+                        <i class="fas fa-info-circle"></i>
+                        While your email appears safe, always practice good security habits.
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    {% if total_breaches > 0 %}
+    <!-- Breaches Found -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="mb-4">
+                <i class="fas fa-list"></i>
+                Breaches where your email was found:
+            </h3>
+
+            <div class="accordion" id="breachesAccordion">
+                {% for breach in breaches %}
+                <div class="accordion-item mb-3 border-{{ 'danger' if loop.index < 3 else 'warning' }}">
+                    <h2 class="accordion-header" id="heading{{ loop.index }}">
+                        <button class="accordion-button {% if loop.index > 1 %}collapsed{% endif %}"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse{{ loop.index }}"
+                                aria-expanded="{% if loop.index == 1 %}true{% else %}false{% endif %}"
+                                aria-controls="collapse{{ loop.index }}">
+                            <div class="d-flex justify-content-between align-items-center w-100 me-3">
+                                <div>
+                                    <strong>{{ breach.Title }}</strong>
+                                    <small class="text-muted ms-2">{{ breach.Domain }}</small>
+                                </div>
+                                <span class="badge bg-{% if loop.index < 3 %}danger{% else %}warning{% endif %} me-5">
+                                    {{ breach.BreachDate }}
+                                </span>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapse{{ loop.index }}"
+                         class="accordion-collapse collapse {% if loop.index == 1 %}show{% endif %}"
+                         aria-labelledby="heading{{ loop.index }}"
+                         data-bs-parent="#breachesAccordion">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h6>Description:</h6>
+                                    <p>{{ breach.Description }}</p>
+
+                                    <h6 class="mt-3">Compromised Data:</h6>
+                                    <div class="mb-3">
+                                        {% for data in breach.DataClasses %}
+                                        <span class="badge bg-secondary me-1 mb-1 p-2">{{ data }}</span>
+                                        {% endfor %}
+                                    </div>
+
+                                    {% if breach.PwnCount %}
+                                    <p><strong>Accounts Affected:</strong> {{ "{:,}".format(breach.PwnCount) }}</p>
+                                    {% endif %}
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bg-light">
+                                        <div class="card-body">
+                                            <h6>Breach Details:</h6>
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2">
+                                                    <i class="fas fa-calendar text-primary"></i>
+                                                    <strong>Date:</strong> {{ breach.BreachDate }}
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="fas fa-globe text-primary"></i>
+                                                    <strong>Domain:</strong> {{ breach.Domain }}
+                                                </li>
+                                                <li class="mb-2">
+                                                    <i class="fas fa-shield-alt text-primary"></i>
+                                                    <strong>Verified:</strong>
+                                                    {% if breach.IsVerified %}
+                                                    <span class="text-success">Yes</span>
+                                                    {% else %}
+                                                    <span class="text-warning">No</span>
+                                                    {% endif %}
+                                                </li>
+                                                {% if breach.IsSensitive %}
+                                                <li class="mb-2">
+                                                    <i class="fas fa-eye-slash text-primary"></i>
+                                                    <strong>Sensitive Breach</strong>
+                                                </li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Classes Summary -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-chart-pie"></i> Exposed Data Types</h5>
+                </div>
+                <div class="card-body">
+                    <div class="data-classes-cloud">
+                        {% for data in data_classes %}
+                        <span class="badge bg-{{ 'danger' if loop.index < 5 else 'warning' if loop.index < 10 else 'info' }} m-1 p-2"
+                              style="font-size: {{ 1.0 + (loop.revindex / 10) }}rem;">
+                            {{ data }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0"><i class="fas fa-exclamation-triangle"></i> Immediate Actions</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-key text-danger me-2"></i>
+                            <strong>Change passwords</strong> for all affected accounts
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-shield-alt text-danger me-2"></i>
+                            <strong>Enable two-factor authentication</strong> where available
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-envelope text-danger me-2"></i>
+                            <strong>Watch for phishing emails</strong> targeting your exposed data
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-bell text-danger me-2"></i>
+                            <strong>Set up breach alerts</strong> for this email
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Recommendations -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card bg-light">
+                <div class="card-header">
+                    <h4 class="mb-0"><i class="fas fa-shield-alt text-primary"></i> Security Recommendations</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-key fa-3x text-warning"></i>
+                                <h5 class="mt-2">Password Security</h5>
+                                <ul class="list-unstyled text-start">
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Use unique passwords</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Minimum 12 characters</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Mix of characters</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Use a password manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                                <h5 class="mt-2">Two-Factor Authentication</h5>
+                                <ul class="list-unstyled text-start">
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Enable 2FA everywhere</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Use authenticator apps</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Backup codes safe</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Avoid SMS if possible</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-eye fa-3x text-info"></i>
+                                <h5 class="mt-2">Monitoring</h5>
+                                <ul class="list-unstyled text-start">
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Regular breach checks</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Monitor account activity</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Review app permissions</li>
+                                    <li class="mb-2"><i class="fas fa-check text-success"></i> Set up alerts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="btn-group btn-group-lg" role="group">
+                <a href="{{ url_for('subscribe') }}?email={{ email }}" class="btn btn-primary">
+                    <i class="fas fa-bell"></i> Get Alerts for This Email
+                </a>
+                <a href="{{ url_for('check_password_page') }}" class="btn btn-warning">
+                    <i class="fas fa-key"></i> Check Passwords
+                </a>
+                <a href="{{ url_for('check_email_page') }}" class="btn btn-outline-secondary">
+                    <i class="fas fa-redo"></i> Check Another
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Share Results -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <p class="text-muted">Share these results:</p>
+            <div class="btn-group" role="group">
+                <button class="btn btn-outline-primary" onclick="copyResults()">
+                    <i class="fas fa-copy"></i> Copy Results
+                </button>
+                <button class="btn btn-outline-info" onclick="shareTwitter()">
+                    <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="btn btn-outline-primary" onclick="shareFacebook()">
+                    <i class="fab fa-facebook"></i> Facebook
+                </button>
+                <button class="btn btn-outline-success" onclick="shareWhatsApp()">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Report -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button class="btn btn-link" onclick="downloadReport()">
+                <i class="fas fa-download"></i> Download Detailed Report (PDF)
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function copyResults() {
+        const email = "{{ email }}";
+        const breaches = {{ total_breaches }};
+        let text = `Breach Check Results for ${email}\n`;
+        text += `Found in ${breaches} breach(es).\n`;
+        text += `Check yours at ${window.location.href}`;
+
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Results copied to clipboard!');
+        });
+    }
+
+    function shareTwitter() {
+        const text = `Check if your email has been in data breaches at Privacy Risk Checker`;
+        const url = window.location.href;
+        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`);
+    }
+
+    function shareFacebook() {
+        const url = window.location.href;
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`);
+    }
+
+    function shareWhatsApp() {
+        const text = `Check your email breach status: ${window.location.href}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(text)}`);
+    }
+
+    function downloadReport() {
+        // In a real app, generate PDF report
+        alert('Report download feature coming soon!');
+    }
+</script>
+{% endblock %}
+
+results.html
+{% extends "base.html" %}
+
+{% block title %}Breach Results - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb bg-white p-3 rounded">
+            <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{ url_for('check_email') }}">Check Email</a></li>
+            <li class="breadcrumb-item active">Results</li>
+        </ol>
+    </nav>
+
+    <!-- Results Card -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-{{ 'danger' if total_breaches > 0 else 'success' }} shadow-lg">
+                <div class="card-body text-center p-5">
+                    {% if total_breaches > 0 %}
+                        <i class="fas fa-exclamation-triangle fa-5x text-danger mb-4"></i>
+                        <h2 class="text-danger mb-3">Oh no — Your email has been pwned!</h2>
+                        <p class="lead mb-4">
+                            <strong>{{ email }}</strong> was found in <strong class="text-danger">{{ total_breaches }}</strong>
+                            data breach{% if total_breaches > 1 %}es{% endif %}.
+                        </p>
+
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded">
+                                    <h3 class="text-danger">{{ total_breaches }}</h3>
+                                    <small>Total Breaches</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded">
+                                    <h3 class="text-warning">{{ data_classes|length }}</h3>
+                                    <small>Data Types Exposed</small>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded">
+                                    <h3 class="text-{{ 'danger' if risk_level == 'high' else 'warning' if risk_level == 'medium' else 'info' }}">
+                                        {{ risk_level|upper }}
+                                    </h3>
+                                    <small>Risk Level</small>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <i class="fas fa-check-circle fa-5x text-success mb-4"></i>
+                        <h2 class="text-success mb-3">Good news — No breaches found!</h2>
+                        <p class="lead mb-4">
+                            <strong>{{ email }}</strong> was not found in any known data breaches.
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if total_breaches > 0 %}
+        <!-- Breaches List -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-white mb-4">Breaches where your email was found:</h3>
+
+                {% for breach in breaches %}
+                <div class="card mb-3 border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">{{ breach.Title }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p><strong>Domain:</strong> {{ breach.Domain }}</p>
+                                <p><strong>Date:</strong> {{ breach.BreachDate }}</p>
+                                <p><strong>Description:</strong> {{ breach.Description }}</p>
+
+                                <div class="mt-3">
+                                    <strong>Data Exposed:</strong>
+                                    <div class="mt-2">
+                                        {% for data in breach.DataClasses %}
+                                        <span class="badge bg-secondary me-1 mb-1">{{ data }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="bg-light p-3 rounded">
+                                    <p><strong>Compromised Accounts:</strong><br>
+                                    {{ "{:,}".format(breach.PwnCount) if breach.PwnCount else 'Unknown' }}</p>
+
+                                    <p><strong>Verified:</strong><br>
+                                    {% if breach.IsVerified %}
+                                        <span class="text-success">✓ Verified</span>
+                                    {% else %}
+                                        <span class="text-warning">⚠ Unverified</span>
+                                    {% endif %}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card bg-warning text-dark">
+                    <div class="card-body">
+                        <h4><i class="fas fa-exclamation-triangle"></i> What to do now:</h4>
+                        <ul class="mb-0">
+                            <li>Change your passwords immediately for affected accounts</li>
+                            <li>Enable two-factor authentication wherever possible</li>
+                            <li>Be cautious of phishing emails targeting your exposed data</li>
+                            <li>Subscribe to breach alerts for this email</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Action Buttons -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <a href="{{ url_for('subscribe') }}?email={{ email }}" class="btn btn-primary btn-lg">
+                <i class="fas fa-bell"></i> Get Alerts for This Email
+            </a>
+            <a href="{{ url_for('check_email') }}" class="btn btn-outline-light btn-lg ms-2">
+                <i class="fas fa-redo"></i> Check Another
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+subscribe.html
+{% extends "base.html" %}
+
+{% block title %}Subscribe - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-header bg-warning text-dark text-center py-3">
+                    <i class="fas fa-bell fa-3x mb-2"></i>
+                    <h3 class="mb-0">Breach Alerts</h3>
+                </div>
+                <div class="card-body p-4">
+                    <form method="POST" action="{{ url_for('subscribe') }}">
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light">
+                                    <i class="fas fa-envelope text-warning"></i>
+                                </span>
+                                <input type="email" class="form-control form-control-lg"
+                                       name="email" placeholder="your@email.com" required>
+                            </div>
+                            <small class="text-muted">
+                                We'll send a verification email to confirm your subscription
+                            </small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Notification Preferences</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="emailAlerts" checked>
+                                <label class="form-check-label" for="emailAlerts">
+                                    Email Alerts (instant notifications)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="weeklyDigest" checked>
+                                <label class="form-check-label" for="weeklyDigest">
+                                    Weekly Digest (summary of new breaches)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info mb-4">
+                            <i class="fas fa-lock"></i>
+                            Your email is hashed before storage. We never share your information.
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the <a href="{{ url_for('terms') }}" target="_blank">Terms of Service</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning btn-lg w-100">
+                            <i class="fas fa-bell"></i> Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Verification Modal -->
+{% if show_verification %}
+<div class="modal fade" id="verificationModal" tabindex="-1" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center p-4">
+                <i class="fas fa-envelope-open-text fa-4x text-success mb-3"></i>
+                <h4>Check Your Email</h4>
+                <p>We've sent a verification link to your email address.</p>
+                <div class="alert alert-info">
+                    <i class="fas fa-clock"></i> The link expires in 24 hours
+                </div>
+                <button class="btn btn-primary" onclick="window.location.href='{{ url_for('home') }}'">
+                    <i class="fas fa-home"></i> Return Home
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new bootstrap.Modal(document.getElementById('verificationModal')).show();
+    });
+</script>
+{% endif %}
+{% endblock %}
+
+terms.html
+{% extends "base.html" %}
+
+{% block title %}Terms of Service - Privacy Risk Checker{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="text-center text-white mb-4">Terms of Service</h1>
+
+            <div class="card">
+                <div class="card-body">
+                    <h4>Acceptance of Terms</h4>
+                    <p>By accessing or using Privacy Risk Checker, you agree to be bound by these terms.</p>
+
+                    <h5 class="mt-4">Use of Service</h5>
+                    <p>You agree to use this service only for lawful purposes and in accordance with these terms.</p>
+
+                    <h5 class="mt-4">Account Responsibilities</h5>
+                    <ul>
+                        <li>You are responsible for maintaining the security of your account</li>
+                        <li>You are responsible for all activities under your account</li>
+                        <li>You must provide accurate information</li>
+                    </ul>
+
+                    <h5 class="mt-4">Service Availability</h5>
+                    <p>We strive to keep the service available 24/7 but do not guarantee uninterrupted access. The service may be temporarily unavailable for maintenance or updates.</p>
+
+                    <h5 class="mt-4">Disclaimer</h5>
+                    <p>This service is provided "as is" without warranties of any kind. We do not guarantee that:</p>
+                    <ul>
+                        <li>The service will meet your requirements</li>
+                        <li>The service will be uninterrupted or error-free</li>
+                        <li>All breach data is 100% accurate</li>
+                    </ul>
+
+                    <h5 class="mt-4">Limitation of Liability</h5>
+                    <p>Privacy Risk Checker shall not be liable for any indirect, incidental, or consequential damages arising from use of the service.</p>
+
+                    <h5 class="mt-4">Changes to Terms</h5>
+                    <p>We reserve the right to modify these terms at any time. Continued use of the service constitutes acceptance of updated terms.</p>
+
+                    <h5 class="mt-4">Contact</h5>
+                    <p>For questions about these terms, contact us at privacy@gmu.ac.in</p>
+
+                    <p class="mt-4">Last updated: March 2024</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
